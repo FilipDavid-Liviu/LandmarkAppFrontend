@@ -49,12 +49,16 @@ const InfoCard = () => {
             saveLandmark(landmark.id);
         }
     };
+
+    const fullImageUrl = imageUrl
+        ? `${import.meta.env.VITE_BACKEND_URL}/static/photos/${imageUrl}`
+        : "";
     return (
         <div className={`infocard ${showInfo ? "infocard--active" : ""}`}>
             <div className="infocard__image-placeholder">
                 {imageUrl && (
                     <img
-                        src={imageUrl}
+                        src={fullImageUrl}
                         alt={landmark?.name || "landmark image"}
                         className="infocard__image"
                     />

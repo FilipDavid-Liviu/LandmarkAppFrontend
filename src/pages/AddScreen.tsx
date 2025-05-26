@@ -198,7 +198,10 @@ export const AddScreen: React.FC = () => {
                                 <img
                                     src={
                                         typeof image === "string"
-                                            ? image
+                                            ? `${
+                                                  import.meta.env
+                                                      .VITE_BACKEND_URL
+                                              }/static/photos/${image}`
                                             : URL.createObjectURL(image)
                                     }
                                     alt="preview"
