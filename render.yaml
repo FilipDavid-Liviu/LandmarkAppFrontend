@@ -8,3 +8,5 @@ services:
       envVars:
           - key: VITE_BACKEND_URL
             value: https://landmarks-backend.davidliviu.com
+      buildCommand: |
+          echo "Building with VITE_BACKEND_URL=$VITE_BACKEND_URL"
