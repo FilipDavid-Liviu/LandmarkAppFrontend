@@ -8,7 +8,3 @@ services:
       envVars:
           - key: VITE_BACKEND_URL
             value: https://landmarks-backend.davidliviu.com
-      routes:
-          - type: rewrite
-            source: /*
-            destination: /index.html
