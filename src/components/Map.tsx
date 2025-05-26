@@ -27,19 +27,19 @@ const Map: React.FC<MapProps> = () => {
     const { selectedLocation, setSelectedLocation } = useSelectedLocation();
 
     const markerIcon = L.icon({
-        iconUrl: "./src/assets/marker.svg",
+        iconUrl: "/marker.svg",
         iconSize: [24, 24],
         iconAnchor: [11, 24],
         popupAnchor: [0, -30],
     });
     const selectedMarkerIcon = L.icon({
-        iconUrl: "./src/assets/marker2.svg",
+        iconUrl: "/marker2.svg",
         iconSize: [24, 24],
         iconAnchor: [11, 24],
         popupAnchor: [0, -30],
     });
     const savedMarkerIcon = L.icon({
-        iconUrl: "./src/assets/marker3.svg",
+        iconUrl: "/marker3.svg",
         iconSize: [24, 24],
         iconAnchor: [11, 24],
         popupAnchor: [0, -30],

@@ -1,10 +1,10 @@
 import "./ButtonBar.css";
-import userIcon from "../assets/user.svg";
-import listIcon from "../assets/list2.svg";
-import plusIcon from "../assets/plus.svg";
-import minusIcon from "../assets/minus.svg";
-import mapIcon from "../assets/map.svg";
-import connection from "../assets/connection.svg";
+import userIcon from "/user.svg";
+import listIcon from "/list2.svg";
+import plusIcon from "/plus.svg";
+import minusIcon from "/minus.svg";
+import mapIcon from "/map.svg";
+import connection from "/connection.svg";
 import { Link } from "react-router-dom";
 import { useLandmarks } from "../contexts/LandmarkContext.tsx";
 import { useAuth } from "../contexts/AuthContext.tsx";
@@ -44,7 +44,7 @@ const ButtonBar = () => {
                     <img src={userIcon} className="icon" alt="User Profile" />
                 </Link>
             </div>
-            <Link className="con" to="localhost:8000">
+            <Link className="con" to="/connection">
                 {isServerUp ? (
                     <div></div>
                 ) : (
