@@ -7,7 +7,7 @@ import {
 } from "react";
 import { useLandmarks } from "../contexts/LandmarkContext.tsx";
 
-const API_URL = "http://localhost:8000";
+const API_URL = `${import.meta.env.VITE_BACKEND_URL}`;
 
 interface AuthContextType {
     isAuthenticated: boolean;

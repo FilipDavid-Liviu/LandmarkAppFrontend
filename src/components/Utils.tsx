@@ -48,7 +48,7 @@ export const authFetch = async (
     const token = localStorage.getItem("token");
 
     const authHeaders: Record<string, string> = {
-        ...(init.headers as Record<string, string>), // cast safely
+        ...(init.headers as Record<string, string>),
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
     };
 

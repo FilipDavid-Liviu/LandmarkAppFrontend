@@ -1,0 +1,14 @@
+services:
+    - type: web
+      name: landmarks-frontend
+      env: docker
+      plan: free
+      region: frankfurt
+      dockerfilePath: ./Dockerfile
+      envVars:
+          - key: VITE_BACKEND_URL
+            value: https://landmarks-backend.davidliviu.com
+      routes:
+          - type: rewrite
+            source: /*
+            destination: /index.html
