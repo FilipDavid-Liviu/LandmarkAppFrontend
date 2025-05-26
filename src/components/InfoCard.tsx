@@ -94,8 +94,8 @@ const InfoCard = () => {
                 <img
                     src={
                         landmark && savedLandmarkIds.includes(landmark.id)
-                            ? "./src/assets/bookmark2.svg"
-                            : "./src/assets/bookmark1.svg"
+                            ? "/bookmark2.svg"
+                            : "/bookmark1.svg"
                     }
                     className="infocard__save-icon"
                     onClick={handleToggleSave}
