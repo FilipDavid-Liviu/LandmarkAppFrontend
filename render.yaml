@@ -1,10 +1,11 @@
 services:
-    - type: web
+    - type: static
       name: landmarks-frontend
-      env: docker
+      env: static
       plan: free
       region: frankfurt
-      dockerfilePath: ./Dockerfile
+      buildCommand: npm run build
+      staticPublishPath: dist
       envVars:
           - key: VITE_BACKEND_URL
             value: https://landmarks-backend.davidliviu.com
