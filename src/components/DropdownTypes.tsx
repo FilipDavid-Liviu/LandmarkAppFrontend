@@ -10,7 +10,7 @@ const landmarkTypes = [
     "Monument",
     "Place of Worship",
     "Religious Monument",
-    "Castle/Fortress",
+    "Fortification",
     "Palace",
     "Ancient Ruins",
     "Natural",
