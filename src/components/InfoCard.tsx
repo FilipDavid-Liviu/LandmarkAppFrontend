@@ -63,6 +63,24 @@ const InfoCard = () => {
                         className="infocard__image"
                     />
                 )}
+                <X
+                    className="infocard__close-icon"
+                    onClick={() => {
+                        setSelectedMarker(null);
+                        setShowInfo(false);
+                    }}
+                />
+                {isAuthenticated && (
+                    <img
+                        src={
+                            landmark && savedLandmarkIds.includes(landmark.id)
+                                ? "/bookmark2.svg"
+                                : "/bookmark1.svg"
+                        }
+                        className="infocard__save-icon"
+                        onClick={handleToggleSave}
+                    />
+                )}
             </div>
             <div className="infocard__firstpart">
                 <div className="infocard__leftpart">
@@ -87,24 +105,6 @@ const InfoCard = () => {
                     {landmark?.description || "No description available."}
                 </div>
             </div>
-            <X
-                className="infocard__close-icon"
-                onClick={() => {
-                    setSelectedMarker(null);
-                    setShowInfo(false);
-                }}
-            />
-            {isAuthenticated && (
-                <img
-                    src={
-                        landmark && savedLandmarkIds.includes(landmark.id)
-                            ? "/bookmark2.svg"
-                            : "/bookmark1.svg"
-                    }
-                    className="infocard__save-icon"
-                    onClick={handleToggleSave}
-                />
-            )}
         </div>
     );
 };

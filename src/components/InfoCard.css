@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .infocard__image {
@@ -88,8 +89,8 @@
     width: 36px;
     height: 36px;
     position: absolute;
-    top: 2.75%;
-    right: 4%;
+    top: 0.5rem;
+    right: 1rem;
     cursor: pointer;
     color: #000000;
 }
@@ -98,8 +99,8 @@
     width: 36px;
     height: 36px;
     position: absolute;
-    top: 38%;
-    right: 4%;
+    bottom: 0.5rem;
+    right: 1rem;
     cursor: pointer;
     color: #000000;
 }

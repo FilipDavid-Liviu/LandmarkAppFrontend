@@ -12,7 +12,9 @@ import {
     sortByLatitude,
     authFetch,
 } from "../components/Utils";
+
 const API_URL = `${import.meta.env.VITE_BACKEND_URL}`;
+//const API_URL = "/api";
 
 export interface Landmark {
     id: number;
