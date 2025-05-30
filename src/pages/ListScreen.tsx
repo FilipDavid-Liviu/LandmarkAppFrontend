@@ -6,8 +6,6 @@ import { useLandmarks } from "../contexts/LandmarkContext.tsx";
 import { useSelectedMarker } from "../contexts/SelectedMarkerContext.tsx";
 import { useSelectedLocation } from "../contexts/SelectedLocationContext.tsx";
 
-const itemsPerPage = 8;
-
 export const ListScreen: React.FC = () => {
     const { searched, fetchFilteredSortedLandmarks } = useLandmarks();
 
@@ -20,6 +18,7 @@ export const ListScreen: React.FC = () => {
             search,
             isSorted ? (isSortedByEquator ? 2 : 1) : 0
         );
+        setCurrentPage(1);
     }, [search, isSorted, isSortedByEquator]);
     const getBackgroundColor = (lat: number) => {
         const normalizedValue = (90 - Math.abs(lat)) / 90;
@@ -28,6 +27,25 @@ export const ListScreen: React.FC = () => {
         const b = Math.floor(255 * (1 - normalizedValue));
         return `rgb(${r}, ${g}, ${b})`;
     };
+
+    const [itemsPerPage, setItemsPerPage] = useState(8);
+
+    useEffect(() => {
+        const calculateItemsPerPage = () => {
+            const totalHeight = window.innerHeight;
+            const paddingHeight = 300;
+            const itemHeight = 50;
+
+            const availableHeight = totalHeight - paddingHeight;
+            const count = Math.floor(availableHeight / itemHeight);
+            setItemsPerPage(count > 0 ? count : 1);
+        };
+
+        calculateItemsPerPage();
+        window.addEventListener("resize", calculateItemsPerPage);
+        return () =>
+            window.removeEventListener("resize", calculateItemsPerPage);
+    }, []);
 
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = Math.ceil(searched.length / itemsPerPage);
@@ -43,6 +61,7 @@ export const ListScreen: React.FC = () => {
         setSelectedLocation(landmark);
         navigate("/");
     };
+
     return (
         <div className="full-screen-container">
             <div className="main-content">
