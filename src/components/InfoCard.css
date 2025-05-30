@@ -89,7 +89,7 @@
     width: 36px;
     height: 36px;
     position: absolute;
-    top: 0.5rem;
+    top: 1rem;
     right: 1rem;
     cursor: pointer;
     color: #000000;
@@ -99,7 +99,7 @@
     width: 36px;
     height: 36px;
     position: absolute;
-    bottom: 0.5rem;
+    bottom: 1rem;
     right: 1rem;
     cursor: pointer;
     color: #000000;

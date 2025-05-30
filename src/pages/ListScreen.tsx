@@ -53,7 +53,7 @@ export const ListScreen: React.FC = () => {
                         <div className="form-container">
                             {/* Left Column */}
                             <div className="left-column">
-                                <div className="field-input">
+                                <div className="search-input">
                                     <input
                                         type="text"
                                         value={search}

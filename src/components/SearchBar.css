@@ -1,9 +1,8 @@
 .searchbar {
     position: relative;
-    width: 320px;
     border: 1px solid black;
-    border-radius: 20px;
-    background-color: #f0fef5;
+    border-radius: 15px;
+    background-color: #f0fef5cc;
     padding: 8px;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
 }
@@ -16,7 +15,7 @@
 }
 
 .searchbar--active {
-    border-radius: 20px 20px 0 0;
+    border-radius: 15px 15px 0 0;
 }
 
 .searchbar__input {
@@ -28,10 +27,10 @@
 }
 
 .searchbar__icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
-    color: #555;
+    color: #000;
 }
 
 .searchbar__dropdown {
@@ -39,9 +38,9 @@
     left: 0;
     top: 100%;
     width: 100%;
-    background-color: #f0fef5;
+    background-color: #f0fef5cc;
     border: 1px solid black;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 15px 15px;
     margin: 0 -1px;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
     padding: 0;
@@ -59,9 +58,9 @@
 }
 
 .searchbar__dropdown-item:hover {
-    background-color: #ece9d5;
+    background-color: #ece9d5cc;
 }
 .searchbar__dropdown-item:last-child {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }

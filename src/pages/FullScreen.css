@@ -3,8 +3,7 @@ input,
 textarea,
 button,
 label,
-.field-input,
-.field-textarea {
+.search-input {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
         "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
@@ -65,7 +64,7 @@ label,
     padding: 5% 2.4% 3%;
 }
 
-.full-screen-container .field-input {
+.full-screen-container .search-input {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,7 +72,7 @@ label,
     height: 28px;
     padding: 10px 19px;
     background: #ffffff;
-    border-radius: 20px;
+    border-radius: 15px;
     border: 1px solid #000;
     font-size: 16px;
     font-weight: 400;

@@ -38,7 +38,9 @@ label,
 }
 
 .no-screen-container .search-bar {
-    position: absolute;
-    margin: 3% 8%;
+    position: fixed;
+    top: 1.5rem;
+    right: 3rem;
     z-index: 1000;
+    width: clamp(250px, 30%, 400px);
 }
